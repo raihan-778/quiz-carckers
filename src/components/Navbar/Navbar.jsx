@@ -1,7 +1,8 @@
 import { Navbar } from "flowbite-react";
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <div>
       <Navbar fluid={true} rounded={true}>
@@ -12,22 +13,66 @@ const Navbar = () => {
             alt="Flowbite Logo"
           />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            Flowbite
+            Quiz with Fun & <br />
+            <small>Explore Web Apps</small>
           </span>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
-          <Navbar.Link href="/navbars" active={true}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "active bg-lime-800 text-lime-50 p-1 border rounded-md"
+                : undefined
+            }
+            to="/home"
+          >
             Home
-          </Navbar.Link>
-          <Navbar.Link href="/navbars">About</Navbar.Link>
-          <Navbar.Link href="/navbars">Services</Navbar.Link>
-          <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-          <Navbar.Link href="/navbars">Contact</Navbar.Link>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "active  bg-lime-800 text-lime-50 p-1 border rounded-md"
+                : undefined
+            }
+            to="/subjects"
+          >
+            Subjects
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "active  bg-lime-800 text-lime-50 p-1 border rounded-md"
+                : undefined
+            }
+            to="/quiz"
+          >
+            Quiz
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "active  bg-lime-800 text-lime-50 p-1 border rounded-md"
+                : undefined
+            }
+            to="/statistics"
+          >
+            Statiscis
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "active  bg-lime-800 text-lime-50 p-1 border rounded-md"
+                : undefined
+            }
+            to="/blog"
+          >
+            Blog
+          </NavLink>
         </Navbar.Collapse>
       </Navbar>
     </div>
   );
 };
 
-export default Navbar;
+export default NavBar;
