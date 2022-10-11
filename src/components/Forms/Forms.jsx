@@ -14,8 +14,18 @@ const Forms = ({ qstn }) => {
   };
   //Click handler for selected option
   const handleSelectAnswer = (e) => {
-    const selected = e.target.checked.parentNode;
+    const selected = e.target.parentElement.children[1].innerHTML;
+    console.log(correct.className);
     console.log(selected);
+    if (selected === correct) {
+      toast.success("Greate!!You have selected the right answer", {
+        autoClose: 2000,
+      });
+    } else {
+      toast.error("Opps!! You have selected the wrong answer!!!", {
+        autoClose: 2000,
+      });
+    }
   };
 
   return (

@@ -81,18 +81,6 @@ const Blog = () => {
               way of doing things, we don’t need to use createRef(). Instead, we
               use useRef(null) to create refs in functional components.
             </p>
-            <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-              <li></li>
-              <li>
-                <a
-                  href="https://tailwindui.com/"
-                  rel="nofollow"
-                  className="text-blue-600 hover:underline dark:text-blue-500"
-                >
-                  Tailwind UI
-                </a>
-              </li>
-            </ul>
           </Accordion.Content>
         </Accordion.Panel>
       </Accordion>
