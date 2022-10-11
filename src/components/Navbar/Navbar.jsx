@@ -29,7 +29,7 @@ const NavBar = () => {
           >
             Home
           </NavLink>
-          <NavLink
+          {/* <NavLink
             className={({ isActive }) =>
               isActive
                 ? "active  bg-lime-800 text-lime-50 p-1 border rounded-md"
@@ -38,14 +38,14 @@ const NavBar = () => {
             to="/subjects"
           >
             Subjects
-          </NavLink>
+          </NavLink> */}
           <NavLink
             className={({ isActive }) =>
               isActive
                 ? "active  bg-lime-800 text-lime-50 p-1 border rounded-md"
                 : undefined
             }
-            to="/quiz"
+            to="quiz"
           >
             Quiz
           </NavLink>
