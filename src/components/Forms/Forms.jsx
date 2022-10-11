@@ -1,12 +1,15 @@
 import React from "react";
 import { Label, Radio } from "flowbite-react";
 import { BeakerIcon, EyeIcon } from "@heroicons/react/24/solid";
+import { toast } from "react-toastify";
 
 const Forms = ({ qstn }) => {
   const { correctAnswer, id, options, question } = qstn;
 
   const correct = correctAnswer;
-  const handleRightAns = () => {};
+  const handleRightAns = () => {
+    toast.info(`Correct Answer is: ${correct}`, { autoClose: 2000 });
+  };
 
   console.log(question);
   return (
