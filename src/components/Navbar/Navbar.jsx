@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div>
       <Navbar fluid={true} rounded={true}>
-        <Navbar.Brand href="https://flowbite.com/">
+        <Navbar.Brand href="/home">
           <img
             src="https://cdn-icons-png.flaticon.com/512/2641/2641457.png"
             className="mr-3 h-6 sm:h-9"
