@@ -1,8 +1,12 @@
 import React from "react";
 import { Label, Radio } from "flowbite-react";
+import { BeakerIcon, EyeIcon } from "@heroicons/react/24/solid";
 
 const Forms = ({ qstn }) => {
   const { correctAnswer, id, options, question } = qstn;
+
+  const correct = correctAnswer;
+  const handleRightAns = () => {};
 
   console.log(question);
   return (
@@ -11,7 +15,10 @@ const Forms = ({ qstn }) => {
         <legend className="p-2 bg-teal-700 text-slate-100 border-2 rounded-md">
           <h2>{question} ?</h2>
         </legend>
-
+        <EyeIcon
+          onClick={handleRightAns}
+          className="h-6 w-6 text-amber-900"
+        ></EyeIcon>
         <div className="text-center mx-auto">
           <div className="flex items-center gap-2 p-2 border-solid border-2 border-indigo-600 bg-lime rounded-md m-2 ">
             <Radio
