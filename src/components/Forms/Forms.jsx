@@ -14,8 +14,8 @@ const Forms = ({ qstn }) => {
   };
   //Click handler for selected option
   const handleSelectAnswer = (e) => {
-    const selected = e.target.parentElement.children[1].innerHTML;
-    console.log(correct.className);
+    const selected = e.target.parentElement.children[1].innerHTML.trim();
+    console.log(correct);
     console.log(selected);
     if (selected === correct) {
       toast.success("Greate!!You have selected the right answer", {
@@ -30,6 +30,10 @@ const Forms = ({ qstn }) => {
 
   return (
     <div className="border-2 rounded-md bg-gray-300 m-3 w-3/4 mx-auto">
+      <EyeIcon
+        onClick={handleRightAns}
+        className="h-6 w-6 text-amber-900"
+      ></EyeIcon>
       <fieldset
         onClick={handleSelectAnswer}
         className="flex flex-col gap-4 "
@@ -38,10 +42,7 @@ const Forms = ({ qstn }) => {
         <legend className="p-2 bg-teal-700 text-slate-100 border-2 rounded-md">
           <h2>{question} ?</h2>
         </legend>
-        <EyeIcon
-          onClick={handleRightAns}
-          className="h-6 w-6 text-amber-900"
-        ></EyeIcon>
+
         <div className="text-center mx-auto">
           <div className="flex items-center gap-2 p-2 border-solid border-2 border-indigo-600 bg-lime rounded-md m-2 ">
             <Radio
