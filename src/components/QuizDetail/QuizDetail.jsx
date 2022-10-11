@@ -5,7 +5,7 @@ import Forms from "../Forms/Forms";
 
 const QuizDetail = () => {
   const quiz = useLoaderData();
-  console.log(quiz);
+
   const { name, logo, questions } = quiz.data;
 
   return (

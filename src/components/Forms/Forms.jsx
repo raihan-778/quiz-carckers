@@ -5,16 +5,26 @@ import { toast } from "react-toastify";
 
 const Forms = ({ qstn }) => {
   const { correctAnswer, id, options, question } = qstn;
+  console.log(qstn);
 
   const correct = correctAnswer;
+  // click handler for Eye Icone
   const handleRightAns = () => {
     toast.info(`Correct Answer is: ${correct}`, { autoClose: 2000 });
   };
+  //Click handler for selected option
+  const handleSelectAnswer = (e) => {
+    const selected = e.target.checked.parentNode;
+    console.log(selected);
+  };
 
-  console.log(question);
   return (
     <div className="border-2 rounded-md bg-gray-300 m-3 w-3/4 mx-auto">
-      <fieldset className="flex flex-col gap-4 " id="radio">
+      <fieldset
+        onClick={handleSelectAnswer}
+        className="flex flex-col gap-4 "
+        id="radio"
+      >
         <legend className="p-2 bg-teal-700 text-slate-100 border-2 rounded-md">
           <h2>{question} ?</h2>
         </legend>
