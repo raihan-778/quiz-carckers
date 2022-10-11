@@ -14,7 +14,7 @@ const QuizDetail = () => {
         <h2>
           Topic Name: <span className="text-3xl">{name}</span>
         </h2>
-        <img className="w-12 ml-3" src={logo} alt="" />
+        <img className="w-12 ml-3 bg-slate-800" src={logo} alt="" />
       </div>
       {questions.map((qstn) => (
         <Forms key={qstn.id} qstn={qstn}></Forms>
