@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 import {
   AreaChart,
@@ -9,39 +8,47 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  BarChart,
+  Bar,
+  Legend,
 } from "recharts";
 
 const Statistics = () => {
-  const data = useLoaderData();
-  console.log(data);
+  const [info, setInfo] = useState([]);
+  useEffect(() => {
+    fetch(`https://openapi.programming-hero.com/api/quiz`)
+      .then((res) => res.json())
+      .then((data) => {
+        const topicsData = data.data;
+        const topicDetail = topicsData.map((topic) => {
+          const name = topic.name;
+          const question = topic.total;
+          const singleTopic = {
+            name: name,
+            question: question,
+          };
+          return singleTopic;
+        });
+        console.log(topicDetail);
+        setInfo(topicDetail);
+        console.log(info);
+      });
+  }, []);
 
-  const info = data.data;
-  const quizInfo = info.map((topic) => {
-    const topicName = topic.name;
-    const topicQuestions = topic.total;
-    const singleTopic = {
-      name: topicName,
-      questions: topicQuestions,
-    };
-    return singleTopic;
-  });
-  console.log(quizInfo);
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <AreaChart
-        width={200}
-        height={60}
-        data={data}
-        margin={{
-          top: 5,
-          right: 0,
-          left: 0,
-          bottom: 5,
-        }}
-      >
-        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
-      </AreaChart>
-    </ResponsiveContainer>
+    <div className="bg-cyan-100">
+      <h2>This is statistics</h2>
+
+      <BarChart width={730} height={250} data={info}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+
+        <Bar dataKey="question" fill="#82ca9d" />
+      </BarChart>
+    </div>
   );
 };
 
