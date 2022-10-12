@@ -1,11 +1,10 @@
 import React from "react";
 import { Label, Radio } from "flowbite-react";
-import { BeakerIcon, EyeIcon } from "@heroicons/react/24/solid";
+import { EyeIcon } from "@heroicons/react/24/solid";
 import { toast } from "react-toastify";
 
 const Forms = ({ qstn }) => {
   const { correctAnswer, id, options, question } = qstn;
-  console.log(qstn);
 
   const correct = correctAnswer;
   // click handler for Eye Icone
@@ -15,8 +14,7 @@ const Forms = ({ qstn }) => {
   //Click handler for selected option
   const handleSelectAnswer = (e) => {
     const selected = e.target.parentElement.children[1].innerHTML.trim();
-    console.log(correct);
-    console.log(selected);
+
     if (selected === correct) {
       toast.success("Greate!!You have selected the right answer", {
         autoClose: 2000,

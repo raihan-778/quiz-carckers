@@ -3,21 +3,21 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div>
+    <div className=" border rounded-md bg-gradient-to-r from-lime-900 to-blue-900 bg-no-repeat bg-center bg-cover ">
       <Accordion>
         <Accordion.Panel>
           <Accordion.Title>
             what is the purpose of react router?
           </Accordion.Title>
           <Accordion.Content>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
+            <p className="mb-2 text-gray-200 dark:text-gray-200">
               React Router, and dynamic, client-side routing, allows us to build
               a single-page web application with navigation without the page
               refreshing as the user navigates. React Router uses component
               structure to call components, which display the appropriate
               information. <br />
             </p>
-            <p className="text-gray-500 dark:text-gray-400">
+            <p className="text-gray-200 dark:text-gray-200">
               By preventing a page refresh, and using Router or Link, which is
               explained in more depth below, the flash of a white screen or
               blank page is prevented. This is one increasingly common way of
@@ -31,7 +31,7 @@ const Blog = () => {
         <Accordion.Panel>
           <Accordion.Title>How does Context Api Works?</Accordion.Title>
           <Accordion.Content>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
+            <p className="mb-2 text-gray-200 dark:text-gray-200">
               Despite React’s popularity, one of the biggest obstacles
               developers face when working with the library is components
               re-rendering excessively, slowing down performance and harming
@@ -39,7 +39,7 @@ const Blog = () => {
               developers need components to communicate with each other in a
               process known as prop drilling.
             </p>
-            <p className="text-gray-500 dark:text-gray-400">
+            <p className="text-gray-200 dark:text-gray-200">
               The new React Context API, introduced with React v.16.3, allows us
               to pass data through our component trees, giving our components
               the ability to communicate and share data at different levels.we
@@ -59,13 +59,13 @@ const Blog = () => {
         <Accordion.Panel>
           <Accordion.Title>What is useRef ?</Accordion.Title>
           <Accordion.Content>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
+            <p className="mb-2 text-gray-200 dark:text-gray-200">
               The useRef Hook is a function that returns a mutable ref object
               whose .current property is initialized with the passed argument
               (initialValue). The returned object will persist for the full
               lifetime of the component.
             </p>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
+            <p className="mb-2 text-gray-200 dark:text-gray-200">
               The useRef Hook allows you to persist values between renders. It
               can be used to store a mutable value that does not cause a
               re-render when updated. It can be used to access a DOM element
@@ -74,7 +74,7 @@ const Blog = () => {
               There are two main uses of useRef. Accessing the DOM nodes or
               React elements and keeping a mutable variable.
             </p>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
+            <p className="mb-2 text-gray-200 dark:text-gray-200">
               When working with class-based components in the past, we used
               createRef() to create a ref. However, now that React recommends
               functional components, and general practice is to follow the Hooks

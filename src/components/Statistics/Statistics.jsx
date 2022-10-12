@@ -39,7 +39,7 @@ const Statistics = () => {
   }, []);
 
   return (
-    <div className="bg-lime-300">
+    <div className="bg-sky-400">
       <h2>This is The statistics Of All Topic Question</h2>
       <ResponsiveContainer height={600} width="50%">
         <BarChart width={150} height={250} data={info}>
@@ -48,7 +48,7 @@ const Statistics = () => {
           <YAxis dataKey="question" />
           <Tooltip />
           <Legend />
-          <Bar dataKey="question" fill="#372948" />
+          <Bar dataKey="question" fill="#251B37" />
         </BarChart>
       </ResponsiveContainer>
     </div>
