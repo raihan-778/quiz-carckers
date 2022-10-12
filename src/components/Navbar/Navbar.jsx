@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="mb-5">
       <Navbar fluid={true} rounded={true}>
         <Navbar.Brand href="/home">
           <img

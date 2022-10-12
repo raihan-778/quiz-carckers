@@ -3,8 +3,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="">
-      <div className="  mt-5 py-5 pl-4 border rounded-md h-40 bg-emerald-900 bg-no-repeat bg-center bg-cover ">
+    <div className="mb-5">
+      <div className=" py-5 pl-4 border rounded-md h-40 bg-emerald-900 bg-no-repeat bg-center bg-cover ">
         <Avatar
           img="https://cdn.pixabay.com/photo/2015/02/18/12/33/computer-640651_960_720.jpg"
           rounded={true}

@@ -8,7 +8,7 @@ const Topics = () => {
   console.log(data);
   const info = data.data;
   return (
-    <div className=" bg-[url('bg-gradient-to-r from-cyan-500 to-blue-500')] border rounded-md bg-emerald-900 bg-no-repeat bg-center bg-cover ">
+    <div className=" border rounded-md bg-emerald-900 bg-no-repeat bg-center bg-cover ">
       <section className=" mt-3 grid gap-3  sm:flex-col sm:mx-auto md:grid-cols-2 lg:grid-cols-2 lg:mx-auto ">
         {info.map((topicData) => (
           <Topic key={topicData.id} topicData={topicData}></Topic>

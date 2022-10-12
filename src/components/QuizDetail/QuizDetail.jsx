@@ -12,7 +12,7 @@ const QuizDetail = () => {
     <div>
       <section>
         <div className="topic-info flex justify-center">
-          <h2>
+          <h2 className="text-sky-300">
             Topic Name: <span className="text-3xl">{name}</span>
           </h2>
           <img

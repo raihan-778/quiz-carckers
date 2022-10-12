@@ -3,7 +3,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div className=" border rounded-md bg-gradient-to-r from-lime-900 to-blue-900 bg-no-repeat bg-center bg-cover ">
+    <div className=" border rounded-md bg-black bg-no-repeat bg-center bg-cover ">
       <Accordion>
         <Accordion.Panel>
           <Accordion.Title>
