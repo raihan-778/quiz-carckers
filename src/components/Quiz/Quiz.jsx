@@ -8,9 +8,9 @@ const Quiz = ({ topic }) => {
 
   return (
     <div>
-      <div className="max-w-sm card">
+      <div className="max-w-sm mx-auto card">
         <Card>
-          <img className="bg-blue-900" src={logo} alt="" />
+          <img className="bg-blue-900 border rounded-md" src={logo} alt="" />
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {name}
           </h5>
