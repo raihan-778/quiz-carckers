@@ -11,6 +11,9 @@ import {
   BarChart,
   Bar,
   Legend,
+  ComposedChart,
+  Line,
+  Scatter,
 } from "recharts";
 
 const Statistics = () => {
@@ -36,18 +39,18 @@ const Statistics = () => {
   }, []);
 
   return (
-    <div className="bg-cyan-100">
-      <h2>This is statistics</h2>
-
-      <BarChart width={730} height={250} data={info}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-
-        <Bar dataKey="question" fill="#82ca9d" />
-      </BarChart>
+    <div className="bg-lime-300">
+      <h2>This is The statistics Of All Topic Question</h2>
+      <ResponsiveContainer height={600} width="50%">
+        <BarChart width={150} height={250} data={info}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis dataKey="question" />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="question" fill="#372948" />
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 };
