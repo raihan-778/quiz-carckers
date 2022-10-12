@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+nav {
+  position: sticky;
+  top: 10px;
+  left: 0;
+}

@@ -39,7 +39,7 @@ const Statistics = () => {
   }, []);
 
   return (
-    <div className="bg-violet-300">
+    <div className="bg-violet-300 border rounded-md">
       <h2>This is The statistics Of All Topic Question</h2>
       <ResponsiveContainer height={600} width="50%">
         <BarChart width={150} height={250} data={info}>
